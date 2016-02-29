@@ -259,16 +259,12 @@ function nav_links()
 
 function presence($string, $valueIfBlank = null)
 {
-    if ($string === '' || $string === null) {
-        $string = $valueIfBlank;
-    }
-
-    return $string;
+    return present($string) === true ? $string : $valueIfBlank;
 }
 
 function present($string)
 {
-    return presence($string) !== null;
+    return $string !== null && $string !== '';
 }
 
 function user_colour_style($colour, $style)
@@ -400,16 +396,15 @@ function fast_imagesize($url)
     });
 }
 
-// parses a string, if it's not an empty string or null,
-// return parsed integer value of it, otherwise return null
+/*
+ * Parses a string. If it's not an empty string or null,
+ * return parsed integer value of it, otherwise return null.
+ */
 function get_int($string)
 {
-    $val = presence($string);
-    if ($val !== null) {
-        $val = intval($val);
+    if (present($string)) {
+        return (int) $string;
     }
-
-    return $val;
 }
 
 // should it be used?
