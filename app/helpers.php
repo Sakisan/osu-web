@@ -434,3 +434,18 @@ function get_class_namespace($className)
 {
     return substr($className, 0, strrpos($className, '\\'));
 }
+
+function get_params($input, $namespace, $keys)
+{
+    if ($namespace !== null) {
+        $input = array_get($input, $namespace);
+    }
+
+    $params = [];
+
+    foreach ($keys as $key) {
+        array_set($params, $key, array_get($input, $key));
+    }
+
+    return $params;
+}
