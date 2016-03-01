@@ -15,10 +15,4 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with osu!web.  If not, see <http://www.gnu.org/licenses/>.
 ###
-class @Url
-  @updateProfileAccount: '/account/update-profile'
-  @pageAccount: '/account/page'
-
-  @beatmapsetCover: (id) => "//b.ppy.sh/thumb/#{id}l.jpg"
-
-  @user: (id) => "/u/#{id}"
+reactTurbolinks.register 'beatmapset-discussion', BeatmapsetDiscussion.Main

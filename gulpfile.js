@@ -78,10 +78,15 @@ elixir(function(mix) {
     'react/beatmaps/*.coffee',
     'react/beatmaps.coffee'
   ], 'public/js/react/beatmaps.js')
+  .coffee([
+    'react/beatmapset-discussion/*.coffee',
+    'react/beatmapset-discussion.coffee'
+  ], 'public/js/react/beatmapset-discussion.js')
   .version([
     'css/app.css',
     'js/app.js',
     'js/react/profile-page.js',
     'js/react/beatmaps.js',
+    'js/react/beatmapset-discussion.js',
   ]);
 });
