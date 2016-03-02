@@ -79,14 +79,14 @@ elixir(function(mix) {
     'react/beatmaps.coffee'
   ], 'public/js/react/beatmaps.js')
   .coffee([
-    'react/beatmapset-discussion/*.coffee',
-    'react/beatmapset-discussion.coffee'
-  ], 'public/js/react/beatmapset-discussion.js')
+    'react/beatmap-discussions/*.coffee',
+    'react/beatmap-discussions.coffee'
+  ], 'public/js/react/beatmap-discussions.js')
   .version([
     'css/app.css',
     'js/app.js',
     'js/react/profile-page.js',
     'js/react/beatmaps.js',
-    'js/react/beatmapset-discussion.js',
+    'js/react/beatmap-discussions.js',
   ]);
 });
